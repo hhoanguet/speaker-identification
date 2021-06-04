@@ -1,6 +1,10 @@
 /record.wav
 /1.16.5
 
+# IDE generated files #
+######################
+*.pyc
+
 # Logs and databases #
 ######################
 *.log
