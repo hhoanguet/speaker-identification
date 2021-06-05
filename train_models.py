@@ -17,17 +17,18 @@ count = 1
 features = np.asarray(())
 for path in file_paths:    
     path = path.strip()   
-    print(path)
+    #print(path)
     # read the audio
     signal, sr = librosa.load(source + path)
-    # extract 40 dimensional MFCC & delta MFCC features
+    #print(signal.shape, sr)
+    #extract 40 dimensional MFCC & delta MFCC features
     vector = extract_features(signal, sr)
     if features.size == 0:
         features = vector
     else:
         features = np.vstack((features, vector))
     # when features of 5 files of speaker are concatenated, then do model training
-    if count == 5:    
+    if count == 5:
         gmm = GaussianMixture(n_components=16, max_iter=200, covariance_type='diag', n_init=3)
         gmm = GaussianMixture()
         gmm.fit(features)

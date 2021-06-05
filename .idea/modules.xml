@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Speaker-identification-using-GMMs-master.iml" filepath="$PROJECT_DIR$/.idea/Speaker-identification-using-GMMs-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/speaker-identification.iml" filepath="$PROJECT_DIR$/.idea/speaker-identification.iml" />
     </modules>
   </component>
 </project>

@@ -15,7 +15,7 @@ def extract_features(signal, sr):
     delta to make it 40 dim feature vector"""
 
     mfcc_feature = librosa.feature.mfcc(signal, n_mfcc=20, sr=sr)
-    mfcc_feature = preprocessing.scale(mfcc_feature)
+    mfcc_feature = preprocessing.scale(mfcc_feature, axis=1)
     mfcc_feature = np.transpose(mfcc_feature)
     #print(mfcc_feature.shape)
     delta = librosa.feature.delta(mfcc_feature)

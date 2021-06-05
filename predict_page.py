@@ -32,15 +32,17 @@ def show_predict_page():
     if uploaded_audio:
         st.audio(uploaded_audio)
         signal, sr = librosa.load(uploaded_audio)
+        print(signal.shape, sr)
         X = extract_features(signal, sr)
-    # if st.button("Record"):
-    #     with st.spinner(f'Recording for {6} seconds ....'):
-    #         record()
-    #     st.success("Recording completed")
-    #     st.audio("record.wav")
+    if st.button("Record"):
+        with st.spinner(f'Recording for {5} seconds ....'):
+            record()
+        st.success("Recording completed")
+        st.audio("record.wav")
     if st.button('Predict'):
         if not uploaded_audio:
             signal, sr = librosa.load("record.wav")
+            print(signal.shape, sr)
             X = extract_features(signal, sr)
         log_likelihood = np.zeros(len(models))
         for i in range(len(models)):

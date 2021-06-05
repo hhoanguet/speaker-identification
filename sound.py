@@ -5,7 +5,7 @@ CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
-RECORD_SECONDS = 6
+RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "record.wav"
 
 
@@ -18,14 +18,14 @@ def record():
                     input=True,
                     frames_per_buffer=CHUNK)
 
-    print("* recording")
+    print("* Recording")
 
     frames = []
 
     for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
         data = stream.read(CHUNK)
         frames.append(data)
-    print("* done recording")
+    print("* Done recording")
     stream.stop_stream()
     stream.close()
     p.terminate()
