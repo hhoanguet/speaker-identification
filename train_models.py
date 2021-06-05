@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #path to training data
-source = "dataset\\"
+source = "dataset\\train\\"
 #path where training speakers will be saved
 dest = "speaker_models\\"
 train_file = "train_path.txt"

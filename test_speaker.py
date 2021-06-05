@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #path to training data
-source = "dataset\\"
+source = "dataset\\test\\"
 model_path = "speaker_models\\"
 test_file = "test_path.txt"
 file_paths = open(test_file, 'r')
@@ -34,7 +34,6 @@ for path in file_paths:
         gmm = models[i]         #checking with each model one by one
         scores = np.array(gmm.score(feature_vector))
         log_likelihood[i] = scores.sum()
-    
     winner = np.argmax(log_likelihood)
     if(speakers[winner] == path.split("\\")[0]):
         num_correct_label += 1
