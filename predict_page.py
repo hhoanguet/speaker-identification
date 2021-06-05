@@ -22,12 +22,7 @@ def show_predict_page():
     st.write("### Welcome to the speaker identification demo. Speaker identification can automatically identify the "
              "person speaking in an audio file given a group of speakers. The input audio is compared against the "
              " provided group of speakers, and in the case there is a match found. The speaker's identity is returned.")
-    speakers = ["Nguyen Huy Hoang",
-                "Nguyen Manh Dung",
-                "Nguyen Phuc Hai",
-                "Nguyen Xuan Hoang",
-                "Tran Manh Hieu",
-                "Tran Trung Thanh"]
+    speakers = [speaker.split('.')[0] for speaker in os.listdir("speaker_models\\")]
     uploaded_audio = st.file_uploader("Upload an audio file")
     if uploaded_audio:
         st.audio(uploaded_audio)
