@@ -27,3 +27,11 @@ cd speaker-identification
 
 You can download our project report from [here](Project_report.pdf)
 
+## Team member:
+**Hoang Huy Nguyen**
+
+Github: [hhoanguet](https://github.com/hhoanguet)
+
+**Hoang Xuan Nguyen**
+
+Github: [hoangngx](https://github.com/hoangngx)
