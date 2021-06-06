@@ -23,4 +23,7 @@ cd speaker-identification
 
 `streamlit run app.py`
 
+## Project report
+
+You can download our project report from [here](Project_report.pdf)
 
