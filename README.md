@@ -1,6 +1,11 @@
 # Speaker-Identification using Gaussian Mixture Models (GMM)
 
 Speaker identification system can automatically identify the person speaking in an audio file given a group of predefined speakers. For testing, an unseen audio is compared against the provided group of speakers, and in the case there is a match found. The speaker's identity is returned.
+
+## Project report
+
+You can download our project report from [here](Project_report.pdf)
+
 ## Installation
 1. Create a new environment with **python 3.6** version because python 3.7 or higher does not support **pyaudio** package.
 ``` 
@@ -22,10 +27,6 @@ cd speaker-identification
 4. Our speaker identification app is ready to run:
 
 `streamlit run app.py`
-
-## Project report
-
-You can download our project report from [here](Project_report.pdf)
 
 ## Team member:
 **Hoang Huy Nguyen**
